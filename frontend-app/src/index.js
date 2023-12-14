@@ -4,11 +4,6 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import { CarritoProvider } from './CarritoContext/CarritoContext.js';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <CarritoProvider>
-      <App />
-    </CarritoProvider>
-  </React.StrictMode>,
+ReactDOM.render(<CarritoProvider><App /></CarritoProvider>,
   document.getElementById('root')
 );

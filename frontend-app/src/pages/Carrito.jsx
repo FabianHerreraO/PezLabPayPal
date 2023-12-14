@@ -3,6 +3,7 @@ import { useCarrito } from '../CarritoContext/CarritoContext';
 import Header from './../components/Header';
 import Footer from '../components/Footer';
 import { PayPalButton } from 'react-paypal-button-v2';
+import '../pages/Carrito.css';
 
 const Carrito = () => {
   const { carrito, vaciarCarrito, eliminarProductoDelCarrito } = useCarrito();
@@ -111,11 +112,8 @@ const Carrito = () => {
             Vaciar Carrito
           </button>
           <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-
+        </div>
+        <div className='PayPalBtn'>
           <PayPalButton
             amount={sumaTotal.toFixed(2)}
             onSuccess={onSuccessHandler}
